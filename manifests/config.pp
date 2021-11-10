@@ -4,20 +4,20 @@
 # Configure nano
 #
 class nano::config (
-  String[1,100] $exclude = $::nano::params::exclude,
-  Boolean $casesensitive = $::nano::params::casesensitive,
-  Boolean $const         = $::nano::params::const,
-  Boolean $cut           = $::nano::params::cut,
-  Boolean $morespace     = $::nano::params::morespace,
-  Boolean $noconvert     = $::nano::params::noconvert,
-  Boolean $nohelp        = $::nano::params::nohelp,
-  Boolean $nonewlines    = $::nano::params::nonewlines,
-  Boolean $nowrap        = $::nano::params::nowrap,
-  Boolean $regexp        = $::nano::params::regexp,
-  Boolean $smarthome     = $::nano::params::smarthome,
-  Boolean $smooth        = $::nano::params::smooth,
-  Boolean $tabsize       = $::nano::params::tabsize,
-  Boolean $tabstospaces  = $::nano::params::tabstospaces) inherits ::nano::params
+  Variant[Array[String], Undef] $exclude = $::nano::params::exclude,
+  Boolean $casesensitive                 = $::nano::params::casesensitive,
+  Boolean $const                         = $::nano::params::const,
+  Boolean $cut                           = $::nano::params::cut,
+  Boolean $morespace                     = $::nano::params::morespace,
+  Boolean $noconvert                     = $::nano::params::noconvert,
+  Boolean $nohelp                        = $::nano::params::nohelp,
+  Boolean $nonewlines                    = $::nano::params::nonewlines,
+  Boolean $nowrap                        = $::nano::params::nowrap,
+  Boolean $regexp                        = $::nano::params::regexp,
+  Boolean $smarthome                     = $::nano::params::smarthome,
+  Boolean $smooth                        = $::nano::params::smooth,
+  Variant[Integer, Undef] $tabsize       = $::nano::params::tabsize,
+  Boolean $tabstospaces                  = $::nano::params::tabstospaces) inherits ::nano::params
   {
     unless $tabsize == undef
     {
