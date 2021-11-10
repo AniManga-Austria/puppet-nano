@@ -1,6 +1,6 @@
 {
 	"name": "cornfeedhobo-nano",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"author": "cornfeedhobo",
 	"summary": "Install nano with handy syntax highlighting. Optionally make it the default editor.",
 	"license": "GPLv3",
