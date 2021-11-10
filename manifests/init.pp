@@ -81,21 +81,22 @@
 # Copyright 2014 cornfeedhobo
 #
 class nano (
-  Boolean $default       = $::nano::params::default,
-  Variant[Array[String], Undef] $exclude = $::nano::params::exclude,
-  Boolean $casesensitive                 = $::nano::params::casesensitive,
-  Boolean $const                         = $::nano::params::const,
-  Boolean $cut                           = $::nano::params::cut,
-  Boolean $morespace                     = $::nano::params::morespace,
-  Boolean $noconvert                     = $::nano::params::noconvert,
-  Boolean $nohelp                        = $::nano::params::nohelp,
-  Boolean $nonewlines                    = $::nano::params::nonewlines,
-  Boolean $nowrap                        = $::nano::params::nowrap,
-  Boolean $regexp                        = $::nano::params::regexp,
-  Boolean $smarthome                     = $::nano::params::smarthome,
-  Boolean $smooth                        = $::nano::params::smooth,
-  Variant[Integer, Undef] $tabsize       = $::nano::params::tabsize,
-  Boolean $tabstospaces                  = $::nano::params::tabstospaces) inherits ::nano::params {
+  Boolean $default                 = false,
+  Optional[Array[String]] $exclude = undef,
+  Boolean $casesensitive           = false,
+  Boolean $const                   = true,
+  Boolean $cut                     = false,
+  Boolean $morespace               = true,
+  Boolean $noconvert               = true,
+  Boolean $nohelp                  = true,
+  Boolean $nonewlines              = false,
+  Boolean $nowrap                  = true,
+  Boolean $regexp                  = false,
+  Boolean $smarthome               = true,
+  Boolean $smooth                  = true,
+  Optional[Integer] $tabsize       = undef,
+  Boolean $tabstospaces            = false)
+{
   notice('nano::begin')
   include ::nano::install
   include ::nano::config
