@@ -8,7 +8,7 @@ class nano::params {
   $default = true
 
   # Syntax highlights to exclude
-  $exclude = undef
+  $exclude = []
 
   # Do case sensitive searches by default
   $casesensitive = false
@@ -44,7 +44,7 @@ class nano::params {
   $smooth = true
 
   # Use this tab size instead of the default; it must be greater than 0
-  $tabsize = undef
+  $tabsize = 4
 
   # Convert typed tabs to spaces
   $tabstospaces = false

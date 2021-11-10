@@ -82,7 +82,7 @@
 #
 class nano (
   Boolean $default                 = false,
-  Optional[Array[String]] $exclude = undef,
+  Array[String] $exclude           = [],
   Boolean $casesensitive           = false,
   Boolean $const                   = true,
   Boolean $cut                     = false,
@@ -94,7 +94,7 @@ class nano (
   Boolean $regexp                  = false,
   Boolean $smarthome               = true,
   Boolean $smooth                  = true,
-  Optional[Integer] $tabsize       = undef,
+  Integer $tabsize                 = 4,
   Boolean $tabstospaces            = false)
 {
   notice('nano::begin')
