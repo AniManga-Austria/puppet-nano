@@ -68,7 +68,7 @@
 #
 #  class { nano:
 #    default => false,
-#    tabsize => '4',
+#    tabsize => 4,
 #    exclude => ['html', 'php']
 #  }
 #

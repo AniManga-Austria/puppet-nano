@@ -7,9 +7,11 @@
   "source": "https://github.com/cornfeedhobo/puppet-nano.git",
   "project_page": "https://github.com/cornfeedhobo/puppet-nano",
   "issues_url": "https://github.com/cornfeedhobo/puppet-nano/issues",
-  "tags": [
-    "nano",
-    "editor"
+  "dependencies": [
+    {
+      "name": "puppetlabs/stdlib",
+      "version_requirement": ">= 4.3.2"
+    }
   ],
   "operatingsystem_support": [
     {
@@ -25,10 +27,11 @@
       "version_requirement": ">= 3.7.0"
     }
   ],
-  "dependencies": [
-    {
-      "name": "puppetlabs/stdlib",
-      "version_requirement": ">= 4.3.2"
-    }
-  ]
+  "tags": [
+    "nano",
+    "editor"
+  ],
+  "pdk-version": "2.2.0",
+  "template-url": "pdk-default#2.2.0",
+  "template-ref": "tags/2.2.0-0-g2381db6"
 }

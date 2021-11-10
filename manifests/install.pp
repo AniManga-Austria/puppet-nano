@@ -1,13 +1,18 @@
-class nano::install ($default = $::nano::params::default) inherits ::nano::params {
+#
+# == Class: nano::install
+#
+# Install nano
+#
+class nano::install (Boolean $default = $::nano::params::default) inherits ::nano::params {
   package { 'nano':
     ensure => 'installed',
     name   => 'nano'
   }
 
-  if str2bool($default) {
+  if $default {
     file { '/etc/profile.d/nano.sh':
       ensure  => 'file',
-      source => 'puppet:///modules/nano/nano.sh',
+      source  => 'puppet:///modules/nano/nano.sh',
       mode    => '0644',
       owner   => 'root',
       group   => 'root',

@@ -1,3 +1,8 @@
+#
+# == Class: nano::params
+#
+# Defines some variables
+#
 class nano::params {
   # Set nano to the default editor
   $default = true
