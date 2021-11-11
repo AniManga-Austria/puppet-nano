@@ -19,9 +19,9 @@ class nano::config (
   Integer $tabsize       = $::nano::params::tabsize,
   Boolean $tabstospaces  = $::nano::params::tabstospaces) inherits ::nano::params
   {
-    unless $tabsize == undef
+    if $tabsize < 1 or $tabsize > 8
     {
-      validate_re($tabsize, '^[1-8]$')
+      fail('Invalid tabsize. Allowed values are: 1-8')
     }
 
     if is_array($exclude) {
